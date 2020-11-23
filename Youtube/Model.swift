@@ -37,6 +37,20 @@ class Model {
             }
             
             //Parsing the data
+            do { //since this methods throw we need to wrap it in do block + using try
+                let decoder = JSONDecoder()
+                
+                decoder.dateDecodingStrategy = .iso8601 //to specify the format of dates if u find them in the json
+                
+             let response = try decoder.decode(Response.self , from: data!)
+                
+                dump(response) //output everything in response to the console
+            }
+            catch
+            {
+                
+            }
+           
             
             
         }
