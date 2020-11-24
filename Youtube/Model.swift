@@ -8,9 +8,15 @@
 import Foundation
 
 
+protocol ModelDelegate {
+    func videosFetched(_ videos: [Video])
+}
+
 class Model {
+    var delegate:ModelDelegate?
+    func getVideos() {
+        
     
-    func getVideos(){
         
         
         // Create a URL object
@@ -44,6 +50,15 @@ class Model {
                 
              let response = try decoder.decode(Response.self , from: data!)
                 
+                //Call the "videosFetched " method of the delegate
+                
+                
+                if response.items != nil{
+                    DispatchQueue.main.async { //reload tableview can only be called in the main thread
+                        self.delegate?.videosFetched(response.items!)
+                    }
+           
+                }
                 dump(response) //output everything in response to the console
             }
             catch

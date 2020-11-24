@@ -69,12 +69,12 @@
 				1CACEA6B256679E0001A50A4 /* ViewController.swift */,
 				1C4A0E14256BC0BC005B26C2 /* Constants.swift */,
 				1C4A0E1A256BC2A9005B26C2 /* Model.swift */,
+				1C4A0E1D256C037E005B26C2 /* Response.swift */,
 				1C4A0E17256BC265005B26C2 /* Video.swift */,
 				1CACEA6D256679E0001A50A4 /* Main.storyboard */,
 				1CACEA70256679E1001A50A4 /* Assets.xcassets */,
 				1CACEA72256679E1001A50A4 /* LaunchScreen.storyboard */,
 				1CACEA75256679E1001A50A4 /* Info.plist */,
-				1C4A0E1D256C037E005B26C2 /* Response.swift */,
 			);
 			path = Youtube;
 			sourceTree = "<group>";
