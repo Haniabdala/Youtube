@@ -10,8 +10,6 @@ import UIKit
 class ViewController: UIViewController , UITableViewDataSource , UITableViewDelegate , ModelDelegate {
     
 
-    
-
     var model = Model()
     var videos = [Video]()
     
@@ -59,13 +57,12 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //datasource method //this method is called for each row specified in the previous method if no row its not going to be called
         
         //Create the cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEOCELL_ID , for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEOCELL_ID , for: indexPath) as! VideoTableViewCell
         
         //Configure the cell with the data
-        //Get the title of the video
-        let title = self.videos[indexPath.row].title
+        let video = self.videos[indexPath.row]
         
-        cell.textLabel?.text = title
+        cell.setCell(video)
         
         //Return the cell
         return cell

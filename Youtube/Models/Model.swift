@@ -16,8 +16,6 @@ class Model {
     var delegate:ModelDelegate?
     func getVideos() {
         
-    
-        
         
         // Create a URL object
         
