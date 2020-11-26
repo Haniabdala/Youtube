@@ -19,6 +19,9 @@
 		1CACEA6F256679E0001A50A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CACEA6D256679E0001A50A4 /* Main.storyboard */; };
 		1CACEA71256679E1001A50A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CACEA70256679E1001A50A4 /* Assets.xcassets */; };
 		1CACEA74256679E1001A50A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CACEA72256679E1001A50A4 /* LaunchScreen.storyboard */; };
+		1CC6226025702855009D2702 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC6225F25702855009D2702 /* DetailViewController.swift */; };
+		1CC6226425702DF9009D2702 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC6226325702DF9009D2702 /* WebKit.framework */; };
+		1CC6226625702E07009D2702 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC6226525702E07009D2702 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		1CACEA70256679E1001A50A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CACEA73256679E1001A50A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CACEA75256679E1001A50A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CC6225F25702855009D2702 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1CC6226325702DF9009D2702 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1CC6226525702E07009D2702 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/PrivateFrameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC6226625702E07009D2702 /* WebKit.framework in Frameworks */,
+				1CC6226425702DF9009D2702 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				1CACEA6B256679E0001A50A4 /* ViewController.swift */,
+				1CC6225F25702855009D2702 /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -98,6 +107,7 @@
 			children = (
 				1CACEA66256679E0001A50A4 /* Youtube */,
 				1CACEA65256679E0001A50A4 /* Products */,
+				1CC6226225702DF9009D2702 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +133,15 @@
 				1CACEA75256679E1001A50A4 /* Info.plist */,
 			);
 			path = Youtube;
+			sourceTree = "<group>";
+		};
+		1CC6226225702DF9009D2702 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CC6226525702E07009D2702 /* WebKit.framework */,
+				1CC6226325702DF9009D2702 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +221,7 @@
 				1C4A0E1B256BC2A9005B26C2 /* Model.swift in Sources */,
 				1C4A0E15256BC0BC005B26C2 /* Constants.swift in Sources */,
 				1C0C16F3256E584700ABFD68 /* VideoTableViewCell.swift in Sources */,
+				1CC6226025702855009D2702 /* DetailViewController.swift in Sources */,
 				1C4A0E18256BC265005B26C2 /* Video.swift in Sources */,
 				1C4A0E1E256C037E005B26C2 /* Response.swift in Sources */,
 			);
@@ -360,6 +380,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HaniHassanAbdallah.Youtube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -379,6 +403,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HaniHassanAbdallah.Youtube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
